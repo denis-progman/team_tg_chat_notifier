@@ -19,8 +19,9 @@ class Router {
                 $pattern = preg_replace('/\/:([^\/]+)/', '/(?P<$1>[^/]+)', $routeUrl);
                 if (preg_match('#^' . $pattern . '$#', $url, $matches)) {
                     $params = array_filter($matches, 'is_string', ARRAY_FILTER_USE_KEY); // Only keep named subpattern matches
-                    call_user_func_array($target, $params);
-                    return;
+                    $result = call_user_func_array($target, $params);
+                    echo $result;
+                    exit();
                 }
             }
         }
