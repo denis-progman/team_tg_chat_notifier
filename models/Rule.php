@@ -8,6 +8,8 @@ class Rule
 
     private string $timezone = 'UTC';
 
+    private string $chatId;
+
     /**
      * @var Event[]
      */
@@ -18,6 +20,7 @@ class Rule
         $this->filePath = $file;
         $ruleData = json_decode(file_get_contents($file), true);
         $this->timezone = $ruleData['timezone'];
+        $this->chatId = $ruleData['chatId'];
 
         foreach ($ruleData as $id => $eventData) {
             $this->events[] = new Event($this, $id, $eventData);
@@ -52,6 +55,11 @@ class Rule
     public function addEvent(Event $event): void
     {
         $this->events[] = $event;
+    }
+
+    public function getChatId(): string
+    {
+        return $this->chatId;
     }
 
 }

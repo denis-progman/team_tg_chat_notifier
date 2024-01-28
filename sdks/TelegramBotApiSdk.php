@@ -15,13 +15,13 @@ class TelegramBotApiSdk
 
     private string $token;
 
-    protected array $requestData;
+    protected ?array $requestData;
 
     protected string $adminChatId;
 
     protected array $adminsList;
 
-    function __construct(array $requestData){
+    function __construct(?array $requestData = null){
         $this->token = config("services.telegram.bot_token");
         $this->adminChatId = config("services.telegram.admin_chat_id");
         $this->adminsList = config("services.telegram.admins_list");;
@@ -76,6 +76,9 @@ class TelegramBotApiSdk
     }
 
     public function sendEchoMessage(string $text, array $keyboardArray = null): mixed {
+        if (!@$this->requestData['message']['chat']['id']) {
+            throw new \Exception("No chat id in request data");
+        }
         return $this->sendMessage(
             $text,
             $this->requestData['message']['chat']['id'],

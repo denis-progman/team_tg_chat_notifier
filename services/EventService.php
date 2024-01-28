@@ -7,7 +7,7 @@ use models\Rule;
 
 class EventService
 {
-    public function getCurrentEvents(): array
+    public static function getCurrentEvents(): array
     {
         $events = [];
         $rules = RuleService::getRules();
@@ -21,10 +21,11 @@ class EventService
         return $events;
     }
 
-    public function createEventMessage(Event $event): string
+    public static function createEventMessage(Event $event): string
     {
         $message = "Event: {$event->getTitle()}\n";
         $message .= "Description: {$event->getDescription()}\n";
         return $message;
     }
+
 }

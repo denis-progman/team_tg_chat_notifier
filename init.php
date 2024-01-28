@@ -1,25 +1,13 @@
 <?php
 require_once "constants.php";
+require_once "core/procedures.php";
 
 setEnv();
 
-function env(string $key, string $default = ''): string {
-    return $_ENV[$key] ?? $default;
-}
-
-function setEnv(): void {
-    $_ENV = parse_ini_file('.env', false, INI_SCANNER_RAW);
-}
-
-function config(string $param, string $default = ''): mixed {
-    $paramParts = explode('.', $param);
-    $config = include 'config.php';
-    foreach ($paramParts as $paramPart) {
-        if (isset($config[$paramPart])) {
-            $config = $config[$paramPart];
-        } else {
-            return $default;
-        }
-    }
-    return $config;
-}
+spl_autoload_register(function($className)
+{
+    $namespace=str_replace("\\","/",__NAMESPACE__);
+    $className=str_replace("\\","/",$className);
+    $class= "/".(empty($namespace)?"":$namespace."/")."{$className}.class.php";
+    include_once($class);
+});
