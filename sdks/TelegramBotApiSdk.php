@@ -2,8 +2,7 @@
 
 namespace App\sdks;
 
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Log;
+use core\helpers\Log;
 
 
 class TelegramBotApiSdk
@@ -35,7 +34,7 @@ class TelegramBotApiSdk
             $str_request .= '?' . http_build_query($options);
         }
 
-        Log::notice("PRE TG API request: \n" . print_r([
+        Log::info("PRE TG API request: \n" . print_r([
                 "method" => $method,
                 "params" => $options,
             ], true));
@@ -43,7 +42,7 @@ class TelegramBotApiSdk
         $response = file_get_contents($str_request);
         $response_data = json_decode($response, 1) ?? $response;
 
-        Log::notice("TG API request: \n" . print_r([
+        Log::info("TG API request: \n" . print_r([
             "method" => $method,
             "params" => $options,
             "result" => $response_data

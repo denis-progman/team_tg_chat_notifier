@@ -1,8 +1,8 @@
 <?php
 
-namespace core\models;
+namespace core\helpers;
 
-class Loger
+class Log
 {
     const DEFAULT_LOG_FILE = 'log';
 
@@ -15,7 +15,7 @@ class Loger
     public static function log(string $message, string $type): void
     {
         $logFile = fopen(LOGS_FOLDER . (self::DEFAULT_LOG_FILE ?? $type), 'a');
-        fwrite($logFile, self::createLogMessage($message, $type) . PHP_EOL);
+        fwrite($logFile, Log . phpself::createLogMessage($message, $type));
         fclose($logFile);
     }
 
