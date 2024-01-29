@@ -2,11 +2,13 @@
 
 namespace models;
 
+use models\Event;
+
 class Rule
 {
     private string $filePath;
 
-    private string $timezone = 'UTC';
+    private string $timezone;
 
     private string $chatId;
 
@@ -19,10 +21,10 @@ class Rule
     {
         $this->filePath = $file;
         $ruleData = json_decode(file_get_contents($file), true);
-        $this->timezone = $ruleData['timezone'];
-        $this->chatId = $ruleData['chatId'];
+        $this->timezone = $ruleData['timezone'] ?? 'UTC';
+        $this->chatId = $ruleData['chat_id'];
 
-        foreach ($ruleData as $id => $eventData) {
+        foreach ($ruleData['events'] as $id => $eventData) {
             $this->events[] = new Event($this, $id, $eventData);
         }
     }

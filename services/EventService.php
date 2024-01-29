@@ -2,7 +2,6 @@
 
 namespace services;
 
-use core\exceptions\SystemError;
 use core\exceptions\UserError;
 use models\Event;
 

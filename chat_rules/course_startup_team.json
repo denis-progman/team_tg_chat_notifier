@@ -1,16 +1,16 @@
 {
-  "chat": "447790838",
-  "time_zone": "America/New_York",
+  "chat_id": "447790838",
+  "timezone": "America/New_York",
   "events": [
     {
-      "year": "",
-      "month": "",
-      "day": "",
-      "week_day": "",
-      "hour": "",
-      "minute": "",
-      "title": "",
-      "description": ""
+      "year": "*",
+      "month": "*",
+      "day": "*",
+      "week_day": "*",
+      "hour": "22",
+      "minute": "57",
+      "title": "Test",
+      "description": "test test"
     }
   ]
 }

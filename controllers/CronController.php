@@ -10,10 +10,10 @@ use services\JobService;
 
 class CronController
 {
-    public static function run(): void
+    public static function run(): ?string
     {
         try {
-            JobService::runCurrentTimeJobs();
+            return JobService::runCurrentTimeJobs() . " jobs run successfully!";
         } catch (SystemError $e) {
             echo "System error";
             Log::error($e->getMessage());
@@ -23,5 +23,6 @@ class CronController
             echo "Unknown error";
             Log::error($e->getMessage());
         }
+        return null;
     }
 }

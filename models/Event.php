@@ -2,6 +2,9 @@
 
 namespace models;
 
+use core\models\MainModel;
+use models\Rule;
+
 class Event extends MainModel
 {
     protected Rule $rule;
@@ -53,12 +56,12 @@ class Event extends MainModel
         $weekday = $now->format('N');
         $hours = $now->format('H');
         $minutes = $now->format('i');
-        return $this->year === '*' || $this->year === $year
-            && $this->month === '*' || $this->month === $month
-            && $this->day === '*' || $this->day === $day
-            && $this->weekday === '*' || $this->weekday === $weekday
-            && $this->hour === '*' || $this->hour === $hours
-            && $this->minute === '*' || $this->minute === $minutes;
+        return ($this->year === '*' || $this->year === $year)
+            && ($this->month === '*' || $this->month === $month)
+            && ($this->day === '*' || $this->day === $day)
+            && ($this->weekday === '*' || $this->weekday === $weekday)
+            && ($this->hour === '*' || $this->hour === $hours)
+            && ($this->minute === '*' || $this->minute === $minutes);
     }
 
     public function getRule(): Rule

@@ -1,6 +1,6 @@
 <?php
 
-const RULES_FOLDER = 'rules/';
+const RULES_FOLDER = 'chat_rules/';
 
 const LOGS_FOLDER = 'logs/';
 

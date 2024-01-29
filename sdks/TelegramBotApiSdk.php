@@ -21,8 +21,8 @@ class TelegramBotApiSdk
 
 
     function __construct(?array $requestData = null){
-        $this->token = config("services.telegram.bot_token");
-        $this->adminChatId = config("services.telegram.admin_chat_id");
+        $this->token = config("telegram.token");
+        $this->adminChatId = config("telegram.admin_chat_id");
         $this->requestData = $requestData;
     }
 
