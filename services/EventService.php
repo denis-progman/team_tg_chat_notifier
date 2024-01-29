@@ -3,6 +3,7 @@
 namespace services;
 
 use core\exceptions\SystemError;
+use core\exceptions\UserError;
 use models\Event;
 
 class EventService
@@ -19,7 +20,7 @@ class EventService
             }
         }
         if(empty($events)) {
-            throw new SystemError('No events found for current time');
+            throw new UserError('No events found for current time');
         }
         return $events;
     }
