@@ -2,7 +2,7 @@ name: Deploy to the hosting FTP
 
 on:
   push:
-    branches: [ "#main" ]
+    branches: [ "main" ]
 
 jobs:
   build-deploy:
@@ -33,9 +33,10 @@ jobs:
         id: ftp_deploy
         uses: SamKirkland/FTP-Deploy-Action@4.3.3
         with:
-          server: ${{ vars.TEST_FTP_STAGE_HOST }}
-          username: ${{ vars.TEST_2_FTP_STAGE_FTP_USER }}
-          password: ${{ secrets.TEST_2_FTP_STAGE_FTP_PASSWORD }}
+          server: ${{ vars.FTP_STAGE_HOST }}
+          username: ${{ vars.FTP_STAGE_FTP_USER }}
+          password: ${{ secrets.FTP_STAGE_FTP_PASSWORD }}
+          server-dir: ./bot_notifier/
 
       - name: Sanding the result notification through Telegram
         run: |
