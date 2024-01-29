@@ -6,7 +6,7 @@ use models\Rule;
 
 class RuleService
 {
-    public static function  getRules(): array
+    public static function getRules(): array
     {
         $rules = [];
         $ruleFiles = glob(RULES_FOLDER . '*.json');

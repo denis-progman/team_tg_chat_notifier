@@ -20,7 +20,7 @@ class TelegramService
         $message = EventService::createEventMessage($event);
         $this->botInstance->sendMessage(
             $message,
-            $event->getRule()->getChatId(),
+            $event->getRule()->getChatId()
         );
     }
 }

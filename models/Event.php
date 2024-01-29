@@ -41,11 +41,6 @@ class Event extends MainModel
         }
     }
 
-    protected function readRuleFromFile(): Rule
-    {
-        return $this->rule;
-    }
-
     public function isNow(): bool
     {
         $now = new \DateTime();

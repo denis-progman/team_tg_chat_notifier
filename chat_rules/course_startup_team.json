@@ -6,11 +6,31 @@
       "year": "*",
       "month": "*",
       "day": "*",
-      "week_day": "*",
-      "hour": "22",
-      "minute": "57",
-      "title": "Test",
-      "description": "test test"
+      "week_day": "7",
+      "hour": "08",
+      "minute": "30",
+      "title": "\uD83D\uDC4B ReportDay!",
+      "description": "Please, check your Trello, and text in short, how it's going, so far."
+    },
+    {
+      "year": "*",
+      "month": "*",
+      "day": "*",
+      "week_day": "2",
+      "hour": "08",
+      "minute": "30",
+      "title": "\uD83D\uDC4B ReportDay!",
+      "description": "Please, check your Trello, and text in short, how it's going, so far."
+    },
+    {
+      "year": "*",
+      "month": "*",
+      "day": "*",
+      "week_day": "4",
+      "hour": "08",
+      "minute": "30",
+      "title": "Hey! Today's a meeting day\uD83D\uDC40",
+      "description": "Check the team calendar for details"
     }
   ]
 }
