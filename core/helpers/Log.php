@@ -12,16 +12,18 @@ class Log
 
     const WARNING_LOG_TYPE = 'warning';
 
+    const LOG_EXTENSION = '.log';
+
     public static function log(string $message, string $type): void
     {
-        $logFile = fopen(LOGS_FOLDER . (self::DEFAULT_LOG_FILE ?? $type), 'a');
-        fwrite($logFile, Log . phpself::createLogMessage($message, $type));
+        $logFile = fopen(LOGS_FOLDER . (self::DEFAULT_LOG_FILE ?? $type) . self::LOG_EXTENSION , 'a');
+        fwrite($logFile, self::createLogMessage($message, $type));
         fclose($logFile);
     }
 
     public static function createLogMessage(string $message, string $type): string
     {
-        return "- " . date('Y-m-d H:i:s') . " [" . strtoupper($type) . "]\n{$message}";
+        return date('Y-m-d H:i:s') . " [" . strtoupper($type) . "]:\n{$message}\n\n";
     }
 
     public static function error(string $message): void
