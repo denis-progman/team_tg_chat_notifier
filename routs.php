@@ -1,7 +1,9 @@
 <?php
+
+use controllers\CronController;
 use core\Router;
 
 Router::addRoute('GET', '/run_currents', function () {
-    echo "My route is working!";
+    CronController::run();
     exit;
 });

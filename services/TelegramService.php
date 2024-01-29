@@ -2,8 +2,8 @@
 
 namespace services;
 
-use App\sdks\TelegramBotApiSdk;
 use models\Event;
+use sdks\TelegramBotApiSdk;
 
 class TelegramService
 {

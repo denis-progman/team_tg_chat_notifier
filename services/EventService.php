@@ -3,7 +3,6 @@
 namespace services;
 
 use models\Event;
-use models\Rule;
 
 class EventService
 {

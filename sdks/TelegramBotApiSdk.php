@@ -1,6 +1,6 @@
 <?php
 
-namespace App\sdks;
+namespace sdks;
 
 use core\helpers\Log;
 
@@ -19,12 +19,10 @@ class TelegramBotApiSdk
 
     protected string $adminChatId;
 
-    protected array $adminsList;
 
     function __construct(?array $requestData = null){
         $this->token = config("services.telegram.bot_token");
         $this->adminChatId = config("services.telegram.admin_chat_id");
-        $this->adminsList = config("services.telegram.admins_list");;
         $this->requestData = $requestData;
     }
 
