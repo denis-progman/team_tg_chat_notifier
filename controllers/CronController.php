@@ -18,8 +18,7 @@ class CronController
             echo "System error";
             Log::error($e->getMessage());
         } catch (UserError $e) {
-            echo "User error";
-            Log::error($e->getMessage());
+            echo $e->getMessage();
         } catch (Exception $e) {
             echo "Unknown error";
             Log::error($e->getMessage());
