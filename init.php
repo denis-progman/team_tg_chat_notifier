@@ -10,3 +10,6 @@ spl_autoload_register(function($className) {
     $class = (empty($namespace) ? "" : $namespace . "/") . "{$className}.php";
     include_once($class);
 });
+
+include "routs.php";
+

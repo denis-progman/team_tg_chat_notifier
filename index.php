@@ -2,6 +2,9 @@
 require_once "init.php";
 
 use core\Router;
-$route = new Router();
 
-include "routs.php";
+try {
+    Router::matchRoute();
+} catch (Exception $e) {
+    echo $e->getMessage();
+}

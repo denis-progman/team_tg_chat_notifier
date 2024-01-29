@@ -2,7 +2,7 @@
 
 namespace core;
 
-use exceptions\SystemError;
+use core\exceptions\SystemError;
 
 class Router {
     protected static $routes = []; // stores routes
