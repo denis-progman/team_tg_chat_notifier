@@ -23,7 +23,6 @@ class JobService
             $telegramService->sendNotificationMessage($event);
             $count++;
         }
-        print_r("{$count} events have been run successfully!");
         Log::log(
             "$count events have been run successfully!",
             "lunches"
