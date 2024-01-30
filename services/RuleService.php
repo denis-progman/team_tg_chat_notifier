@@ -6,6 +6,9 @@ use models\Rule;
 
 class RuleService
 {
+    /**
+     * @return Rule[]
+     */
     public static function getRules(): array
     {
         $rules = [];

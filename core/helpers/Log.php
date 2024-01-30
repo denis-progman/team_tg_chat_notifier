@@ -16,9 +16,11 @@ class Log
 
     public static function log(string $message, string $type): void
     {
-        $logFile = fopen(LOGS_FOLDER . (self::DEFAULT_LOG_FILE ?? $type) . self::LOG_EXTENSION , 'a');
-        fwrite($logFile, self::createLogMessage($message, $type));
-        fclose($logFile);
+        file_put_contents(
+            LOGS_FOLDER . (self::DEFAULT_LOG_FILE ?? $type) . self::LOG_EXTENSION,
+            self::createLogMessage($message, $type),
+            FILE_APPEND
+        );
     }
 
     public static function createLogMessage(string $message, string $type): string
