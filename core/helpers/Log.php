@@ -14,10 +14,10 @@ class Log
 
     const LOG_EXTENSION = '.log';
 
-    public static function log(string $message, string $type): void
+    public static function log(string $message, ?string $type = null): void
     {
         file_put_contents(
-            LOGS_FOLDER . (self::DEFAULT_LOG_FILE ?? $type) . self::LOG_EXTENSION,
+            LOGS_FOLDER . ($type ?? self::DEFAULT_LOG_FILE) . self::LOG_EXTENSION,
             self::createLogMessage($message, $type),
             FILE_APPEND
         );
