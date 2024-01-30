@@ -7,8 +7,8 @@
       "month": "*",
       "day": "*",
       "week_day": "7",
-      "hour": "08",
-      "minute": "30",
+      "hour": "9",
+      "minute": "00",
       "title": "\uD83D\uDC4B ReportDay!",
       "description": "Please, check your Trello, and text in short, how it's going, so far."
     },
@@ -17,7 +17,7 @@
       "month": "*",
       "day": "*",
       "week_day": "2",
-      "hour": "14",
+      "hour": "9",
       "minute": "00",
       "title": "\uD83D\uDC4B ReportDay!",
       "description": "Please, check your Trello, and text in short, how it's going, so far."
@@ -27,8 +27,8 @@
       "month": "*",
       "day": "*",
       "week_day": "4",
-      "hour": "08",
-      "minute": "30",
+      "hour": "8",
+      "minute": "00",
       "title": "Hey! Today's a meeting day\uD83D\uDC40",
       "description": "Check the team calendar for details"
     }
