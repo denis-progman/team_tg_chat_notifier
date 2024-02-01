@@ -32,8 +32,8 @@ class EventService
 
     public static function createEventMessage(Event $event): string
     {
-        $message = "Event: {$event->getTitle()}\n";
-        $message .= "Description: {$event->getDescription()}\n";
+        $message = "Event: {$event->getTitle()}\n\n";
+        $message .= "{$event->getDescription()}\n";
         return $message;
     }
 

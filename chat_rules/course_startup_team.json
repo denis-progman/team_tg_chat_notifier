@@ -26,11 +26,11 @@
       "year": "*",
       "month": "*",
       "day": "*",
-      "week_day": "4",
+      "week_day": "5",
       "hour": "8",
       "minute": "00",
       "title": "Hey! Today's a meeting day\uD83D\uDC40",
-      "description": "Check the team calendar for details"
+      "description": "See details on the team calendar. \n+Check your Trello in advance, be prepared"
     }
   ]
 }
