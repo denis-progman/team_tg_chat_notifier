@@ -5,7 +5,7 @@ namespace core;
 use core\exceptions\SystemError;
 
 class Router {
-    protected static $routes = []; // stores routes
+    protected static array $routes = []; // stores routes
 
     public static function addRoute(string $method, string $url, callable $target) {
         self::$routes[$method][$url] = $target;
