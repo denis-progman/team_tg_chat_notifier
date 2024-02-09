@@ -17,7 +17,7 @@ class EventService
         $events = [];
         $rules = RuleService::getRules();
         foreach ($rules as $rule) {
-            foreach ($rule->getEvents() as $eventKey => $event) {
+            foreach ($rule->getEvents() as $event) {
                 if ($event->isNow()) {
                     $events[] = $event;
                 }
