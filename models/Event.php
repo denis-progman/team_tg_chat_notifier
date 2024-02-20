@@ -2,6 +2,7 @@
 
 namespace models;
 
+use core\helpers\Log;
 use core\models\MainModel;
 use models\Rule;
 
@@ -51,6 +52,8 @@ class Event extends MainModel
         $weekday = $now->format('N');
         $hours = $now->format('H');
         $minutes = $now->format('i');
+        Log::log("Year: $year | Month: $month | Day: $day | Weekday: $weekday | Hours: $hours | Minutes: $minutes", "event_check");
+
         return ($this->year === '*' || $this->year === $year)
             && ($this->month === '*' || $this->month === $month)
             && ($this->day === '*' || $this->day === $day)

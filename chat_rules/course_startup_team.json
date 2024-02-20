@@ -7,7 +7,7 @@
       "month": "*",
       "day": "*",
       "week_day": "2",
-      "hour": "9",
+      "hour": "09",
       "minute": "00",
       "title": "\uD83D\uDC4B ReportDay!",
       "description": "Please, check your Trello, and text in short, how it's going, so far."
@@ -17,8 +17,8 @@
       "month": "*",
       "day": "*",
       "week_day": "5",
-      "hour": "7",
-      "minute": "30",
+      "hour": "07",
+      "minute": "45",
       "title": "Hey! Today's a meeting day\uD83D\uDC40",
       "description": "See details on the team calendar. \n+Check your Trello in advance, be prepared"
     }
