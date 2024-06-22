@@ -1,0 +1,26 @@
+{
+  "chat_id": "-1002118965429",
+  "timezone": "America/New_York",
+  "events": [
+    {
+      "year": "*",
+      "month": "12",
+      "day": "31",
+      "weekday": "*",
+      "hour": "10",
+      "minute": "00",
+      "title": "\uD83C\uDF32\uD83C\uDF85 New Year Eve is coming!",
+      "description": "Happy New Year Dream Team! Horray!"
+    },
+    {
+      "year": "*",
+      "month": "03",
+      "day": "08",
+      "weekday": "*",
+      "hour": "10",
+      "minute": "00",
+      "title": "Hey! Happy International Women's Day! \uD83C\uDF37",
+      "description": "We love you ladies! Stay quite and strong as always!"
+    }
+  ]
+}

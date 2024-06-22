@@ -3,3 +3,5 @@
 .env
 .terraform
 .DS_Store
+chat_rules/*
+!chat_rules/example_rule_file.json
